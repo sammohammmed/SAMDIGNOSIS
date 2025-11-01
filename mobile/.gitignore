@@ -1,0 +1,16 @@
+node_modules
+.expo
+dist
+build
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+.eas
+package-lock.json
+android/app/build
+ios/Pods
+*.iml
+.idea
+.DS_Store
