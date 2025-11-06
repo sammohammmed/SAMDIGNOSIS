@@ -4,6 +4,9 @@
   },
   "build": {
     "production": {
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://samdiagnosis-ai.onrender.com/api"
+      },
       "android": {
         "buildType": "apk"
       }
