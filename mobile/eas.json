@@ -5,7 +5,10 @@
   },
   "build": {
     "production": {
-      "android": { "buildType": "apk" }
+      "android": {
+        "buildType": "apk",
+        "credentialsSource": "remote"
+      }
     }
   },
   "submit": { "production": {} }
