@@ -1,8 +1,9 @@
 // app.config.js
+
 export default ({ config }) => ({
   expo: {
-    name: "SAM-DIAGNOSIS",
-    slug: "samdiagnosis",
+    name: "تشخيص سامدياجنوسيس",
+    slug: "samdiagnosis-46xx8fbbj6hyx4chaj4", // ✅ مطابق لاسم المشروع في Expo
     version: "1.0.0",
     orientation: "portrait",
 
@@ -33,14 +34,18 @@ export default ({ config }) => ({
 
     extra: {
       eas: {
-        // 👇 Project ID (UUID) الصحيح الخاص بمشروعك على Expo
-        projectId: "4f2a9d8c-01ef-4d12-967d-ef8a2873b6a0"
+        projectId: "4f2a9d8c-01ef-4d12-967d-ef8a2873b6a0" // ✅ نفس الموجود في Expo
       },
+
       AI_BASE_URL: "https://samdiagnosis-ai.onrender.com",
       AI_API_KEY: "samzxzx1990"
     },
 
     sdkVersion: "51.0.0",
-    platforms: ["ios", "android"]
+
+    platforms: [
+      "android",
+      "ios"
+    ]
   }
 });
