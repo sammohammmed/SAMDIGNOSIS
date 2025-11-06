@@ -1,29 +1,46 @@
-// mobile/app.config.js
-export default {
+// app.config.js
+export default ({ config }) => ({
   expo: {
     name: "SAM-DIAGNOSIS",
     slug: "samdiagnosis",
     version: "1.0.0",
     orientation: "portrait",
-    icon: "./assets/icon.png",
-    splash: { image: "./assets/splash.png", resizeMode: "contain", backgroundColor: "#000000" },
 
-    ios: { bundleIdentifier: "com.samdiagnosis.app", supportsTablet: true },
+    icon: "./assets/icon.png",
+    splash: {
+      image: "./assets/splash.png",
+      resizeMode: "contain",
+      backgroundColor: "#000000"
+    },
+
+    ios: {
+      bundleIdentifier: "com.samdiagnosis.app",
+      supportsTablet: true
+    },
+
     android: {
       package: "com.samdiagnosis.app",
       versionCode: 1,
-      adaptiveIcon: { foregroundImage: "./assets/icon.png", backgroundColor: "#0a0f1a" }
+      adaptiveIcon: {
+        foregroundImage: "./assets/icon.png",
+        backgroundColor: "#0a0f1a"
+      }
     },
 
-    web: { favicon: "./assets/icon.png" },
+    web: {
+      favicon: "./assets/icon.png"
+    },
 
     extra: {
-      eas: { projectId: "ضع-الـ-UUID-الذي-نسخته-من-Expo" },   // ← مهم جدًا
+      eas: {
+        // 👇 هذا هو رقم المشروع (Project ID) الصحيح من Expo
+        projectId: "4f2a9d8c-01ef-4d12-967d-ef8a2873b6a0"
+      },
       AI_BASE_URL: "https://samdiagnosis-ai.onrender.com",
       AI_API_KEY: "samzxzx1990"
     },
 
-    // (اختياري) لو تبغى تتجنب تحقق iOS مؤقتًا:
-    platforms: ["android"]
+    sdkVersion: "51.0.0",
+    platforms: ["ios", "android"]
   }
-};
+});
