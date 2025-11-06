@@ -5,8 +5,10 @@ export default ({ config }) => ({
     slug: "samdiagnosis",
     version: "1.0.0",
     orientation: "portrait",
-
     icon: "./assets/icon.png",
+    userInterfaceStyle: "light",
+    newArchEnabled: true,
+
     splash: {
       image: "./assets/splash.png",
       resizeMode: "contain",
@@ -24,7 +26,9 @@ export default ({ config }) => ({
       adaptiveIcon: {
         foregroundImage: "./assets/icon.png",
         backgroundColor: "#0a0f1a"
-      }
+      },
+      edgeToEdgeEnabled: true,
+      predictiveBackGestureEnabled: false
     },
 
     web: {
