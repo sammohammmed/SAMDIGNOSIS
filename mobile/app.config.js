@@ -1,9 +1,9 @@
-// app.config.js
+// mobile/app.config.js
 
 export default ({ config }) => ({
   expo: {
     name: "تشخيص سامدياجنوسيس",
-    slug: "samdiagnosis-46xx8fbbj6hyx4chaj4", // ✅ مطابق لاسم المشروع في Expo
+    slug: "samdiagnosis-46xx8fbbj6hyx4chaj4", // مطابق لمشروع Expo
     version: "1.0.0",
     orientation: "portrait",
 
@@ -16,7 +16,11 @@ export default ({ config }) => ({
 
     ios: {
       bundleIdentifier: "com.samdiagnosis.app",
-      supportsTablet: true
+      supportsTablet: true,
+      // مطلوب لتجاوز تحذير التشفير في iOS
+      infoPlist: {
+        ITSAppUsesNonExemptEncryption: false
+      }
     },
 
     android: {
@@ -34,18 +38,13 @@ export default ({ config }) => ({
 
     extra: {
       eas: {
-        projectId: "4f2a9d8c-01ef-4d12-967d-ef8a2873b6a0" // ✅ نفس الموجود في Expo
+        projectId: "4f2a9d8c-01ef-4d12-967d-ef8a2873b6a0"
       },
-
       AI_BASE_URL: "https://samdiagnosis-ai.onrender.com",
       AI_API_KEY: "samzxzx1990"
     },
 
     sdkVersion: "51.0.0",
-
-    platforms: [
-      "android",
-      "ios"
-    ]
+    platforms: ["android", "ios"]
   }
 });
