@@ -5,8 +5,10 @@ export default ({ config }) => ({
     slug: "samdiagnosis",
     version: "1.0.0",
     orientation: "portrait",
-
     icon: "./assets/icon.png",
+    userInterfaceStyle: "light",
+    newArchEnabled: true,
+
     splash: {
       image: "./assets/splash.png",
       resizeMode: "contain",
@@ -15,7 +17,7 @@ export default ({ config }) => ({
 
     ios: {
       bundleIdentifier: "com.samdiagnosis.app",
-      supportsTablet: true
+      buildNumber: "1"
     },
 
     android: {
@@ -24,7 +26,9 @@ export default ({ config }) => ({
       adaptiveIcon: {
         foregroundImage: "./assets/icon.png",
         backgroundColor: "#0a0f1a"
-      }
+      },
+      edgeToEdgeEnabled: true,
+      predictiveBackGestureEnabled: false
     },
 
     web: {
@@ -32,11 +36,11 @@ export default ({ config }) => ({
     },
 
     extra: {
-      // Expo EAS project (اختياري: إن كان عندك ID جاهز ضعه هنا)
-      // eas: { projectId: "ضع-الـUUID-إن-عندك" },
-
-      AI_BASE_URL: "https://samdiagnosis-ai.onrender.com",
-      AI_API_KEY: "samzxzx1990"
+      eas: {
+        projectId: process.env.EXPO_PROJECT_ID
+      },
+      AI_BASE_URL: process.env.AI_BASE_URL,
+      AI_API_KEY: process.env.AI_API_KEY
     }
   }
 });

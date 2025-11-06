@@ -1,22 +1,30 @@
 {
   "name": "samdiagnosis",
   "version": "1.0.0",
-  "main": "App.js",
+  "main": "App.tsx",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "expo": "~51.0.0",
+    "@expo/vector-icons": "^15.0.3",
+    "@react-navigation/bottom-tabs": "^7.8.2",
+    "@react-navigation/native": "^7.1.19",
+    "@react-navigation/native-stack": "^7.6.2",
+    "expo": "~54.0.20",
+    "expo-constants": "^18.0.10",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
     "react-native": "0.74.2",
     "react-native-paper": "^5.12.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@types/react": "^18.3.26",
+    "typescript": "^5.9.3"
   },
   "private": true
 }
