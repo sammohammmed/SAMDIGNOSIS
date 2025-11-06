@@ -33,7 +33,7 @@ export default ({ config }) => ({
 
     extra: {
       eas: {
-        // 👇 هذا هو رقم المشروع (Project ID) الصحيح من Expo
+        // 👇 Project ID (UUID) الصحيح الخاص بمشروعك على Expo
         projectId: "4f2a9d8c-01ef-4d12-967d-ef8a2873b6a0"
       },
       AI_BASE_URL: "https://samdiagnosis-ai.onrender.com",
