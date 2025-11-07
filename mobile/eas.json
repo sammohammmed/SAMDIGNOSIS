@@ -1,17 +1,16 @@
 {
-  "cli": {
-    "version": ">= 3.20.0",
-    "appVersionSource": "remote"
-  },
+  "cli": { "appVersionSource": "remote" },
   "build": {
     "production": {
-      "android": {
-        "buildType": "apk",
-        "credentialsSource": "remote"
-      }
+      "android": { "buildType": "app-bundle" }   // AAB للمتجر
+    },
+    "apk": {
+      "android": { "buildType": "apk" },         // هذا يطلع APK للتجربة
+      "distribution": "internal"
+    },
+    "development": {
+      "developmentClient": true
     }
   },
-  "submit": {
-    "production": {}
-  }
+  "submit": { "production": {} }
 }
