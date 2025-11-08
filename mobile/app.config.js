@@ -8,7 +8,7 @@ export default () => ({
 
     icon: "./assets/icon.png",
     splash: {
-      image: "./assets/splash.png",
+      image: "./assets/splash-icon.png",
       resizeMode: "contain",
       backgroundColor: "#000000"
     },
@@ -34,7 +34,7 @@ export default () => ({
       eas: { projectId: "4f2a9d8c-01ef-4d12-967d-ef8a2873b6a0" } // نفس الـ Project ID الظاهر لك في Expo
     },
 
-    sdkVersion: "51.0.0",
+    sdkVersion: "~54.0.20",
     platforms: ["ios", "android"]
   }
 });
